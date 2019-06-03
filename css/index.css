@@ -75,7 +75,13 @@ h1, h2, h3, h4, h5 {
 
 @media (max-width: 800px) {
     .container {
-        width: 90%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
     }
 }
 
@@ -86,6 +92,7 @@ h1, h2, h3, h4, h5 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        width: 100%;
     }
 }
 
@@ -94,6 +101,7 @@ h1, h2, h3, h4, h5 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        width: 100%;
     }
 }
 
@@ -108,7 +116,9 @@ header nav {
     header nav {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        flex-flow: wrap;
+        align-content: center;
+        width: 100%;
     }
 }
 
@@ -121,8 +131,14 @@ header nav a {
 
 @media (max-width: 500px) {
     header nav a {
-        margin: 15px 0;
-
+        background: lightgray;
+        color: black;
+        margin: 5px 50px;
+        padding: 5px 50px;
+        border: 1px solid black;
+        width: 100%;
+        box-sizing: content-box;
+        text-align: center;
     }
 }
 
@@ -136,6 +152,12 @@ header nav a:first-child {
 
 header nav a:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 500px) {
+    header nav a:first-child, header nav a:last-child {
+        margin: 5px 50px;
+    }
 }
 
 header .logo {
@@ -224,6 +246,14 @@ header .logo {
     }
 }
 
+@media (max-width: 500px) {
+    .main-content .top-content {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 90%;
+    }
+}
+
 .main-content .top-content .text-content {
   width: 410px;
   display: inline-block;
@@ -233,6 +263,12 @@ header .logo {
 @media (max-width: 800px) {
     .main-content .top-content .text-content {
         padding: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-content .top-content .text-content {
+        padding: 20px 5px;
     }
 }
 
@@ -263,6 +299,14 @@ header .logo {
     }
 }
 
+@media (max-width: 500px) {
+    .main-content .bottom-content {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .main-content .bottom-content .text-content {
   width: 275px;
   display: inline-block;
@@ -272,6 +316,13 @@ header .logo {
 @media (max-width: 800px) {
     .main-content .bottom-content .text-content {
         padding: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-content .bottom-content .text-content {
+        width: 100%;
+        padding: 20px 5px;
     }
 }
 
